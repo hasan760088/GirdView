@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/custom_dialog_background"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:elevation="4dp">
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/nointernet"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Internet Connection"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/internet"
+        android:textColor="#91000000"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btnTryagain"
+        android:layout_marginBottom="16dp"
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:text="Try Again"
+        android:fontFamily="serif"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_dialog_background"
+        android:backgroundTint="#FF2600"/>
+
+
+</LinearLayout>

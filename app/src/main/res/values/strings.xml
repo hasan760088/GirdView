@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GirdView</string>
+    <string name="internet">Your Internet connection is currently not available,Please check or try again</string>
+</resources>
