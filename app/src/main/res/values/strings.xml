@@ -1,4 +1,30 @@
 <resources>
     <string name="app_name">GirdView</string>
+
+    <string-array name="country_name">
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Australia</item>
+        <item>Azerbaijan</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Belgium</item>
+        <item>Bolivia</item>
+        <item>Brazil</item>
+        <item>Cameroon</item>
+        <item>Chile</item>
+        <item>Canada</item>
+        <item>Colombia</item>
+        <item>Denmark</item>
+        <item>Ecuador</item>
+        <item>Egypt</item>
+        <item>France</item>
+
+
+    </string-array>
+
+
     <string name="internet">Your Internet connection is currently not available,Please check or try again</string>
 </resources>
