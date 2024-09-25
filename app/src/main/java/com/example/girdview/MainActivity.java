@@ -23,7 +23,7 @@ import java.security.AllPermission;
 import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
-    LinearLayout home,infomation,edt_text,infomation2;
+    LinearLayout home,infomation,edt_text,infomation2,spenar, btn_media;
     Button btnTryAgain;
     AlertDialog dialog;
     TextView txView;
@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         infomation=findViewById(R.id.infomation);
         edt_text=findViewById(R.id.edt_text);
         infomation2=findViewById(R.id.infomation2);
+        btn_media=findViewById(R.id.btn_media);
+        spenar=findViewById(R.id.spenar);
         txView=findViewById(R.id.txView);
 
         //********Animaton View*****//
@@ -103,6 +105,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,RegistrationForm2.class);
+                startActivity(intent);
+
+            }
+        });
+
+        spenar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,Spnar_or_Combo_Activity.class);
+                startActivity(intent);
+
+            }
+        });
+        btn_media.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(MainActivity.this,Media_player.class);
                 startActivity(intent);
 
             }

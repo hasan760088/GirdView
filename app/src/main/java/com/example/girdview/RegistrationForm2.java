@@ -3,10 +3,12 @@ package com.example.girdview;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +26,9 @@ public class RegistrationForm2 extends AppCompatActivity {
     CheckBox check_Box2;
     RadioGroup rediogrupid;
     RadioButton radioButton;
-    TextView tvdisplay;
+    TextView tvdisplay,tvDisplay_item;
+    String [] country_name;
+    Spinner spnerid;
 
 
 
@@ -44,6 +48,14 @@ public class RegistrationForm2 extends AppCompatActivity {
         rediogrupid=findViewById(R.id.rediogrupid);
         tvdisplay=findViewById(R.id.tvdisplay);
 
+        //************Spiner id***************//
+        country_name=getResources().getStringArray(R.array.country_name);
+        spnerid=findViewById(R.id.spnerid);
+
+        //************Array String adaptor for spiner***************//
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.item_spener,R.id.tvDisplay_item,country_name);
+        spnerid.setAdapter(adapter);
+
 
 
 
@@ -60,10 +72,11 @@ public class RegistrationForm2 extends AppCompatActivity {
                 String com_Pasword2 = edt_Cmpassword2.getText().toString();
                 String checkBox2 = check_Box2.getText().toString();
 
+                //*******Radio button id*********//
                 int selected = rediogrupid.getCheckedRadioButtonId();
                 radioButton = findViewById(selected);
                 String value = radioButton.getText().toString();
-
+                //*****************************************//
                 if (name2.isEmpty() || email2.isEmpty() || phone2.isEmpty() || password2.isEmpty() || checkBox2.isEmpty() ) {
                     edt_comName2.setError("Please enter your Name");
                     edt_CmEmail2.setError("Please enter your Email");
@@ -83,6 +96,9 @@ public class RegistrationForm2 extends AppCompatActivity {
                     tvdisplay.append("Phone: " + phone2 + "\n");
                     tvdisplay.append("Password: " + password2 + "\n");
                     tvdisplay.append(" Gender is " + value + "\n");
+
+                    String value_spiner = spnerid.getSelectedItem().toString();
+                    tvdisplay.append("Your country is "+value_spiner);
 
 
                     
