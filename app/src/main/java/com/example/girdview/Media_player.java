@@ -37,6 +37,8 @@ public class Media_player extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(mediaPlayer!=null) mediaPlayer.release();
                 mediaPlayer = MediaPlayer.create(Media_player.this,R.raw.message);
                 mediaPlayer.start();
 
@@ -48,6 +50,8 @@ public class Media_player extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if(mediaPlayer!=null) mediaPlayer.release();
 
                 mediaPlayer = new MediaPlayer();
                 try {
@@ -61,6 +65,7 @@ public class Media_player extends AppCompatActivity {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(mediaPlayer!=null) mediaPlayer.release();
 
                 mediaPlayer = new MediaPlayer();
                 try {
